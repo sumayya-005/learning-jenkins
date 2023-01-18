@@ -5,7 +5,7 @@ pipeline {
   }
 
   environment {
-    NEWRELIC_API_KEY = credentials('ansible')
+    NEWRELIC_API_KEY = credentials('ansible1')
     SAMPLE_URL = "google.com"
   }
 
