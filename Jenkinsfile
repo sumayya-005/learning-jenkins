@@ -18,13 +18,13 @@ pipeline {
       }
     }
 
-    stage('Bar') {
-      steps {
-        echo 'Hello world'
-      }
-    }
+//     stage('Bar') {
+//       steps {
+//         echo 'Hello world'
+//       }
+//     }
+//
 
-  }
 
   post {
     always {
