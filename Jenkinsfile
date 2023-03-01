@@ -9,5 +9,12 @@ pipeline {
               echo 'Hello world'
             }
         }
+
+        stages('bar') {
+           steps {
+              echo 'loops'
+           }
+        }
     }
-}}
+
+}
