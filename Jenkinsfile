@@ -1,35 +1,13 @@
 pipeline {
-
-  agent {
-    node { label 'workstation' }
-  }
-   
-//   environment {
-//     NEWRELIC_API_KEY = credentials('ansible1')
-//     SAMPLE_URL = "google.com"
-//   }
-
-  stages {
-
-    stage('Foo') {
-      steps {
-        echo 'Hello world'
-        echo 'Bye'
-      }
+    agent any
+    environment {
+        NEWRELIC_API_KEY = credentials('newrelic-api-key')
     }
-
-    stage('Bar') {
-      steps {
-        echo 'Hello world'
-      }
+    stages {
+        stage('Foo') {
+            steps {
+              echo 'Hello world'
+            }
+        }
     }
-
-  }
-
-  post {
-    always {
-      echo 'I will always say Hello again!'
-    }
-  }
-
-}
+}}
