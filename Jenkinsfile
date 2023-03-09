@@ -1,7 +1,7 @@
 pipeline {
 
-  agent {
-    node { label 'workstation' }
+  agent any {
+//    node { label 'workstation' }
   }
 
   environment {
